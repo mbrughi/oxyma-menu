@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oxy MB Menu Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/oxyma-style.css">
+</head>
+<body class="dark-mode-auto">
+
+<div class="oxyma-menu-wrapper oxyma-align-left position-left dark-mode-auto" data-position="left">
+  <nav id="oxyma-menu" class="oxyma-canvas-menu" aria-hidden="true" role="navigation">
+    <ul>
+      <li><a href="#"><svg class="icon"><use href="#home"/></svg>Home</a></li>
+      <li><a href="#"><svg class="icon"><use href="#information-circle"/></svg>About</a></li>
+      <li>
+        <a href="#">
+          <svg class="icon"><use href="#briefcase"/></svg>Services
+          <svg class="icon caret" viewBox="0 0 20 20" fill="currentColor"><path d="M6 6L14 10L6 14V6Z" /></svg>
+        </a>
+        <ul>
+          <li><a href="#"><svg class="icon"><use href="#globe-alt"/></svg>Web</a></li>
+          <li><a href="#"><svg class="icon"><use href="#device-phone-mobile"/></svg>Mobile</a></li>
+          <li>
+            <a href="#">
+              <svg class="icon"><use href="#chat-bubble-left-right"/></svg>Consulting
+              <svg class="icon caret" viewBox="0 0 20 20" fill="currentColor"><path d="M6 6L14 10L6 14V6Z" /></svg>
+            </a>
+            <ul>
+              <li><a href="#"><svg class="icon"><use href="#magnifying-glass"/></svg>SEO</a></li>
+              <li><a href="#"><svg class="icon"><use href="#presentation-chart-line"/></svg>Ads</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#"><svg class="icon"><use href="#envelope"/></svg>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="oxyma-menu-overlay" tabindex="-1"></div>
+  <div id="oxyma-menu-toggle" class="oxyma-hamburger" aria-controls="oxyma-menu" aria-expanded="false" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<script src="assets/js/oxyma.js"></script>
+</body>
+</html>

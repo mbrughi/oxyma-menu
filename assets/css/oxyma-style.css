@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.oxyma-menu-wrapper {
+  position: relative;
+}
+
+.oxyma-canvas-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 3rem 0rem 1rem;
+  z-index: 1001;
+}
+.oxyma-menu-wrapper.open .oxyma-canvas-menu.position-left {
+  transform: translateX(0);
+}
+.oxyma-menu-wrapper.open .oxyma-canvas-menu.position-right {
+  transform: translateX(0);
+}
+.oxyma-menu-wrapper.open .oxyma-canvas-menu.position-center {
+  transform: translateX(-50%);
+}
+
+.oxyma-canvas-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.oxyma-canvas-menu li {
+  position: relative;
+}
+
+.oxyma-canvas-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #11989c;
+  font-weight: 600;
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.oxyma-canvas-menu li a:hover {
+  background: #f0f9fa;
+}
+
+.oxyma-canvas-menu li ul {
+  display: none;
+  margin-left: 0.5rem;
+  border-left: 2px solid #11989c30;
+  padding-left: 0.5rem;
+}
+
+.oxyma-canvas-menu li.open > ul {
+  display: block;
+}
+
+.oxyma-canvas-menu svg.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.oxyma-canvas-menu .caret {
+  margin-left: auto;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+  padding-right: 0.5rem;
+}
+.oxyma-canvas-menu li.open > a .caret {
+  transform: rotate(90deg);
+}
+
+.oxyma-menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  pointer-events: none;
+}
+.oxyma-menu-wrapper.open .oxyma-menu-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.oxyma-hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 28px;
+  gap: 5px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1002;
+}
+.oxyma-hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: #11989c;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.oxyma-menu-wrapper.open .oxyma-hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.oxyma-menu-wrapper.open .oxyma-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.oxyma-menu-wrapper.open .oxyma-hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode-auto .oxyma-canvas-menu {
+    background: #1a1a1a;
+    color: #eee;
+  }
+  .dark-mode-auto .oxyma-canvas-menu li a {
+    color: #c0f0f2;
+    border-color: #444;
+  }
+  .dark-mode-auto .oxyma-canvas-menu li a:hover {
+    background: #222;
+  }
+  .dark-mode-auto .oxyma-hamburger span {
+    background: #eee;
+  }
+}
