@@ -86,7 +86,7 @@ Wrap your menu inside the `.oxyma-menu-wrapper`, and provide a toggle button (`#
 
 ## :link: Live Demo
 
-:point_right: **[https://](https://)**
+:point_right: **[Click 4 Demo](https://mbrughi.github.io/oxyma-menu)**
 
 ---
 
