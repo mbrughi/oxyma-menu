@@ -22,7 +22,7 @@
 
 ## :wrench: Installation
 
-1. Clone the repository or [download ZIP](https://github.com/mbrughi/oxyma-menu/archive/refs/heads/main.zip)
+1. Clone the repository or download ZIP
 2. Place the files in your project folder:
 
 ```
